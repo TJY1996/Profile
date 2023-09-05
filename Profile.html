@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(16, 16, 17);
+            font-family: Helvetica;
+            font-size: 50px;
+            margin: auto;
+            text-align: center;
+            opacity: 0;
+            animation: slideIn 1s forwards;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start; /* Align items to the top */
+            justify-content: center;
+        }
+
+        figure {
+            text-align: left;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            border: 2px solid black;
+        }
+
+        .text-container {
+            max-width: 50%;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typeWriter 3s steps(40) forwards;
+            border-right: 2px solid black;
+            margin-left: -400px; /* Adjust margin for spacing to the left */
+            margin-top: 250; /* Adjust margin to align to the top */
+            border: 2px linen
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes typeWriter {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my page.</h1>
+    <br>
+    <div class="container">
+        <figure>
+            <img src="Photo_Leisure.jpg" alt="Leisure Photo">
+        </figure>
+        <div class="text-container">
+            <i>Hello Everyone, my name is Jin Yao. Graduated from the National University of Singapore with a FCH and <br>
+            now looking for more interesting data analytics projects. 
+            You can find my LinkedIn profile here <a href="https://www.linkedin.com/in/jinyaotai/" target="_blank">Jin Yao</a></i>
+        </div>
+    </div>
+</body>
+</html>
